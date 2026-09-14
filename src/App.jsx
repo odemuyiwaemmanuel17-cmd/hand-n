@@ -1,4 +1,5 @@
 import React from 'react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import ScrollytellingExperience from './components/ScrollytellingExperience.jsx';
 import OverlayUI from './components/OverlayUI.jsx';
 
@@ -47,6 +48,7 @@ export default function App() {
         <ScrollytellingExperience />
         <OverlayUI />
       </ErrorBoundary>
+      <SpeedInsights />
     </div>
   );
 }
