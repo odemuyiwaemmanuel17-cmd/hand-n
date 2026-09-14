@@ -1,7 +1,7 @@
 {
   "name": "handytrust",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "description": "HandyTrust — escrow-backed home maintenance platform as an interactive 3D scrollytelling experience.",
   "scripts": {
