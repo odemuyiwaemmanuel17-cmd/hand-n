@@ -312,7 +312,7 @@ export default function OverlayUI() {
       </div>
 
       {/* header */}
-      <header className="absolute top-0 left-0 right-0 flex items-center justify-between px-4 sm:px-7 py-4">
+      <header className="absolute top-0 left-0 right-0 flex items-center justify-between px-4 sm:px-7 py-4 bg-slate-950/55 backdrop-blur-md border-b border-white/10">
         <div className="flex items-center gap-2.5">
           <Shield className="w-6 h-6" />
           <div>
@@ -332,7 +332,7 @@ export default function OverlayUI() {
       </header>
 
       {/* beat rail */}
-      <nav className="absolute right-3 sm:right-5 top-1/2 -translate-y-1/2 flex flex-col gap-1.5 pointer-events-auto">
+      <nav className="absolute right-3 sm:right-5 top-1/2 -translate-y-1/2 flex flex-col gap-1.5 pointer-events-auto rounded-2xl border border-white/10 bg-slate-950/55 px-3 py-3 backdrop-blur-md">
         {BEATS.map((b, i) => {
           const on = i === active;
           return (
@@ -352,7 +352,7 @@ export default function OverlayUI() {
       </nav>
 
       {/* beat caption */}
-      <div key={active} className="ht-fade-up absolute left-4 sm:left-7 bottom-5 sm:bottom-7 max-w-[60vw]">
+      <div key={active} className="ht-fade-up absolute left-4 sm:left-7 bottom-5 sm:bottom-7 max-w-[60vw] rounded-2xl border border-white/10 bg-slate-950/60 px-5 py-4 backdrop-blur-md">
         <div className="text-[11px] font-semibold tracking-[0.3em] text-brass-400">
           {String(active + 1).padStart(2, '0')} / 08 — {BEATS[active].label.toUpperCase()}
         </div>
@@ -368,7 +368,7 @@ export default function OverlayUI() {
       </div>
 
       {/* trust badges */}
-      <div className="absolute right-4 sm:right-7 bottom-5 sm:bottom-7 hidden md:flex items-center gap-4 text-[10.5px] text-white/45">
+      <div className="absolute right-4 sm:right-7 bottom-5 sm:bottom-7 hidden md:flex items-center gap-4 rounded-full border border-white/10 bg-slate-950/55 px-4 py-2 text-[10.5px] text-white/65 backdrop-blur-md">
         <span className="flex items-center gap-1.5"><Shield className="w-3.5 h-3.5" /> Verified IDs</span>
         <span className="flex items-center gap-1.5"><span className="text-brass-400">🔒</span> Escrow protected</span>
         <span className="flex items-center gap-1.5"><Star /> 4.8 · 12k jobs</span>

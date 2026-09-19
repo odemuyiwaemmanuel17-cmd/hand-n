@@ -265,9 +265,49 @@ function LagosNeighborhood() {
   );
 }
 
+function DaylightLandscape() {
+  const portals = [
+    [30, -11, -0.35], [80, -40, -0.35], [130, -45, 0.35],
+    [180, -53, -0.35], [230, -55, 0.35], [282, -58, -0.35], [345, -88, 0.3],
+  ];
+  return (
+    <group>
+      {/* One continuous world replaces the former floating dark islands. */}
+      <mesh receiveShadow position={[190, -0.72, -50]}>
+        <boxGeometry args={[470, 0.8, 150]} />
+        <meshStandardMaterial color="#7f9b69" roughness={0.98} />
+      </mesh>
+      <mesh receiveShadow position={[190, -0.27, -48]} rotation={[-Math.PI / 2, 0, 0]}>
+        <planeGeometry args={[445, 9]} />
+        <meshStandardMaterial color="#d9d0bd" roughness={0.9} />
+      </mesh>
+      {/* White sculptural portals echo the reference video's Spline helix. */}
+      {portals.map(([x, z, turn], i) => (
+        <group key={i} position={[x, 0, z]} rotation={[0, turn, 0]}>
+          {Array.from({ length: 11 }).map((_, j) => {
+            const a = Math.PI * (j / 10);
+            return (
+              <mesh
+                key={j}
+                castShadow
+                position={[Math.cos(a) * 7.5, Math.sin(a) * 7.5, 0]}
+                rotation={[0, 0, a - Math.PI / 2]}
+              >
+                <capsuleGeometry args={[0.32, 2.4, 8, 16]} />
+                <meshPhysicalMaterial color="#fffdf7" roughness={0.22} clearcoat={0.65} />
+              </mesh>
+            );
+          })}
+        </group>
+      ))}
+    </group>
+  );
+}
+
 export default function CinematicWorlds() {
   return (
     <>
+      <DaylightLandscape />
       <MansionEstate />
       <PlumbingWorld />
       <HVACWorld />

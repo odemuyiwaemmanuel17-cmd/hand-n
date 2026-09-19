@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
-import { ScrollControls, Stars } from '@react-three/drei';
+import { ScrollControls, Sky, SoftShadows } from '@react-three/drei';
 import CameraRig from './CameraRig.jsx';
 import BeatOverlay from './BeatOverlay.jsx';
 import CinematicWorlds from './CinematicWorlds.jsx';
@@ -99,25 +99,26 @@ export default function ScrollytellingExperience() {
         camera={{ fov: 47, near: 0.1, far: 1000, position: [30, 18, 32] }}
         gl={{ antialias: true, powerPreference: 'high-performance', toneMapping: 4, toneMappingExposure: 1.05 }}
       >
-        <color attach="background" args={['#071018']} />
-        <fog attach="fog" args={['#071018', 110, 430]} />
-        <ambientLight intensity={0.42} color="#dbe8ff" />
-        <hemisphereLight args={['#87a8c8', '#24301f', 0.8]} />
+        <color attach="background" args={['#b9d9ee']} />
+        <fog attach="fog" args={['#c9e1ee', 150, 520]} />
+        <Sky distance={450000} sunPosition={[120, 80, 45]} turbidity={7} rayleigh={1.35} mieCoefficient={0.006} mieDirectionalG={0.82} />
+        <SoftShadows size={22} samples={12} focus={0.45} />
+        <ambientLight intensity={0.8} color="#eef7ff" />
+        <hemisphereLight args={['#d9f0ff', '#687552', 1.35]} />
         <directionalLight
           position={[-40, 55, 30]}
-          intensity={2.2}
-          color="#ffd0a3"
+          intensity={3.2}
+          color="#fff1cf"
           castShadow
           shadow-mapSize={[2048, 2048]}
-          shadow-camera-left={-45}
-          shadow-camera-right={45}
-          shadow-camera-top={45}
-          shadow-camera-bottom={-45}
+          shadow-camera-left={-70}
+          shadow-camera-right={70}
+          shadow-camera-top={70}
+          shadow-camera-bottom={-70}
           shadow-camera-near={1}
-          shadow-camera-far={130}
+          shadow-camera-far={180}
           shadow-bias={-0.0003}
         />
-        <Stars radius={500} depth={120} count={3600} factor={4} saturation={0.2} fade speed={0.35} />
         <Suspense fallback={null}>
           <ScrollControls pages={8} damping={0.24}>
             <Scene />

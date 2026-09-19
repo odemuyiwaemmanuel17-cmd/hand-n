@@ -6,7 +6,7 @@
 // 8-beat camera timeline. Each keyframe is [x, y, z] in world units.
 // Tuned for the dollhouse-style Nigerian residence built in src/components.
 export const CAMERA_KEYFRAMES = [
-  { pos: [30, 18, 32], lookAt: [0, 3, -2], fov: 47 }, // 0 Mansion estate
+  { pos: [28, 10.5, 28], lookAt: [0, 3.2, -2], fov: 45 }, // 0 Mansion estate
   { pos: [66, 10, -3], lookAt: [55, 3.5, -25], fov: 43 }, // 1 Plumbing studio
   { pos: [117, 10, -30], lookAt: [105, 4, -55], fov: 42 }, // 2 HVAC lab
   { pos: [168, 10, -10], lookAt: [155, 4, -35], fov: 42 }, // 3 Electrical room
