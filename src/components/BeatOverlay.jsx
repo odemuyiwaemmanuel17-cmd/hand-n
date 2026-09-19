@@ -1,5 +1,6 @@
 import { useRef } from 'react';
-import { useFrame } from '@react-three/fiber';
+import * as THREE from 'three';
+import { useFrame, useThree } from '@react-three/fiber';
 import { Html, useScroll } from '@react-three/drei';
 
 // Spatial typography anchored in 3D space. Fades in/out based on how close
@@ -39,7 +40,7 @@ export default function BeatOverlay({
       transform
       position={position}
       rotation={rotation}
-      scale={scale}
+      scale={responsive}
       distanceFactor={6}
       zIndexRange={[30, 0]}
       wrapperClass="beat-html"
