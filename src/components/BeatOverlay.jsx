@@ -38,6 +38,7 @@ export default function BeatOverlay({
   return (
     <Html
       transform
+      sprite
       position={position}
       rotation={rotation}
       scale={responsive}

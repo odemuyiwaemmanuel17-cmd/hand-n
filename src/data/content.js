@@ -6,14 +6,14 @@
 // 8-beat camera timeline. Each keyframe is [x, y, z] in world units.
 // Tuned for the dollhouse-style Nigerian residence built in src/components.
 export const CAMERA_KEYFRAMES = [
-  { pos: [9.5, 8.5, 13.5], lookAt: [0, 1.0, -0.5], fov: 50 }, // 0 Entry (aerial)
-  { pos: [-2.1, 1.35, 0.4], lookAt: [-2.55, 0.6, -2.25], fov: 40 }, // 1 Plumbing
-  { pos: [1.5, 1.65, 0.6], lookAt: [1.85, 2.35, -2.7], fov: 40 }, // 2 AC repair
-  { pos: [-0.9, 1.6, -0.4], lookAt: [-1.25, 1.6, -2.7], fov: 40 }, // 3 Electrical
-  { pos: [3.6, 6.6, 5.6], lookAt: [-0.3, 3.8, -1.0], fov: 48 }, // 4 Solar roof
-  { pos: [2.0, 1.5, 2.3], lookAt: [0.85, 1.0, 0.1], fov: 38 }, // 5 Verified artisan
-  { pos: [-0.15, 1.35, 1.15], lookAt: [-0.2, 1.0, -0.95], fov: 36 }, // 6 Escrow vault
-  { pos: [0.5, 24, 33], lookAt: [0, 0.5, -1], fov: 55 }, // 7 Neighborhood reveal
+  { pos: [30, 18, 32], lookAt: [0, 3, -2], fov: 47 }, // 0 Mansion estate
+  { pos: [66, 10, -3], lookAt: [55, 3.5, -25], fov: 43 }, // 1 Plumbing studio
+  { pos: [117, 10, -30], lookAt: [105, 4, -55], fov: 42 }, // 2 HVAC lab
+  { pos: [168, 10, -10], lookAt: [155, 4, -35], fov: 42 }, // 3 Electrical room
+  { pos: [220, 16, -38], lookAt: [205, 3, -70], fov: 48 }, // 4 Solar field
+  { pos: [268, 11, -15], lookAt: [255, 3.5, -40], fov: 42 }, // 5 Verified pros hub
+  { pos: [323, 11, -47], lookAt: [309, 4, -76], fov: 40 }, // 6 Escrow chamber
+  { pos: [416, 38, -42], lookAt: [380, 3, -100], fov: 57 }, // 7 Lagos reveal
 ];
 
 export const BEATS = [
