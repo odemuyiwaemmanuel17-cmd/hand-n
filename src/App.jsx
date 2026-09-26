@@ -1,6 +1,5 @@
 import React from 'react';
-import ScrollytellingExperience from './components/ScrollytellingExperience.jsx';
-import OverlayUI from './components/OverlayUI.jsx';
+import ThreeScene from './components/ThreeScene.tsx';
 
 // Catches render-time failures so the user sees guidance instead of a void.
 class ErrorBoundary extends React.Component {
@@ -46,11 +45,10 @@ export default function App() {
   }, []);
 
   return (
-    <div className="fixed inset-0 w-screen h-screen bg-[#0a0a0a] overflow-hidden select-none font-sans">
+    <main className="relative min-h-[900vh] w-full overflow-x-hidden select-none font-sans">
       <ErrorBoundary>
-        <ScrollytellingExperience />
-        <OverlayUI />
+        <ThreeScene />
       </ErrorBoundary>
-    </div>
+    </main>
   );
 }
