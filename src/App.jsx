@@ -41,10 +41,6 @@ class ErrorBoundary extends React.Component {
 }
 
 export default function App() {
-  React.useEffect(() => {
-    document.getElementById('boot-veil')?.remove();
-  }, []);
-
   return (
     <div className="fixed inset-0 w-screen h-screen bg-[#0a0a0a] overflow-hidden select-none font-sans">
       <ErrorBoundary>
